@@ -27,7 +27,7 @@ class CellProfileName: UITableViewCell {
         viewContainer.layer.borderColor = #colorLiteral(red: 0.9803921569, green: 0.9803921569, blue: 0.9803921569, alpha: 1).cgColor
         txtFld.delegate = self
         txtFld.text = displaytext
-        txtFld.isUserInteractionEnabled = isEditable
+        txtFld.isUserInteractionEnabled = false
     }
     
 }

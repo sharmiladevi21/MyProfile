@@ -38,11 +38,12 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpUI()
+        loadModel()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
-        loadModel()
 
     }
     

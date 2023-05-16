@@ -7,7 +7,7 @@ import Combine
 class ProfileViewModel {
     
     private var profileData = [Result]()
-    var delegate : SuccessAndErrorHandling?
+    weak var delegate : SuccessAndErrorHandling?
     
     //MARK: - Getter Method
     
@@ -33,7 +33,7 @@ class ProfileViewModel {
             
             if response.count != 0 {
                 
-                
+                self?.profileData.removeAll()
                 do {
                     
                     var aDictResponseData = [String:Any]()

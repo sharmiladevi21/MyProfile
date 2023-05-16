@@ -26,7 +26,7 @@ class ProfileImageTableViewCell: UITableViewCell {
         Helper.sharedInstance.setRoundCornerView(aView: imgView)
         imgView.contentMode = .scaleAspectFit
         
-        let profileUrl = data.picture.thumbnail
+        let profileUrl = data.picture.medium
         if URL.init(string: profileUrl) != nil{
            imgView.sd_setImage(with: URL(string: profileUrl)!)
            lblProfileName.isHidden = true
