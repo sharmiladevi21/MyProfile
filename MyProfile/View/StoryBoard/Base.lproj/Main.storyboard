@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,9 +12,9 @@
         <!--Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="BYZ-38-t0r" customClass="ProfileViewController" customModule="MyProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -20,6 +22,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34" y="4"/>
+        </scene>
+        <!--Progress Hud-->
+        <scene sceneID="DsO-Iy-58f">
+            <objects>
+                <viewController storyboardIdentifier="ProgressHud" id="wMa-K2-Pdl" customClass="ProgressHud" customModule="MyProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="033-L8-HYV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-c8-4Ot">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mba-Of-64H">
+                                        <rect key="frame" x="5" y="100" width="90" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mba-Of-64H" secondAttribute="trailing" constant="5" id="9TN-bU-DWD"/>
+                                    <constraint firstAttribute="width" constant="100" id="Aoi-DI-6S7"/>
+                                    <constraint firstAttribute="height" constant="100" id="Vcu-qU-Nso"/>
+                                    <constraint firstAttribute="bottom" secondItem="mba-Of-64H" secondAttribute="bottom" id="W7u-Qf-PuY"/>
+                                    <constraint firstItem="mba-Of-64H" firstAttribute="leading" secondItem="wbT-c8-4Ot" secondAttribute="leading" constant="5" id="zqE-0L-yda"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fj-Ou-F1i">
+                                <rect key="frame" x="171.66666666666666" y="401" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="jYL-fG-KI8"/>
+                                    <constraint firstAttribute="height" constant="50" id="tYY-qc-EKJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nPJ-BL-ng1"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.29571963029999998" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9fj-Ou-F1i" firstAttribute="centerY" secondItem="033-L8-HYV" secondAttribute="centerY" id="EkJ-LH-wUe"/>
+                            <constraint firstItem="wbT-c8-4Ot" firstAttribute="centerY" secondItem="033-L8-HYV" secondAttribute="centerY" id="VN7-vg-h4M"/>
+                            <constraint firstItem="wbT-c8-4Ot" firstAttribute="centerX" secondItem="033-L8-HYV" secondAttribute="centerX" id="nrS-eN-9mR"/>
+                            <constraint firstItem="9fj-Ou-F1i" firstAttribute="centerX" secondItem="033-L8-HYV" secondAttribute="centerX" id="v7u-Qo-uSS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTitle" destination="mba-Of-64H" id="O4s-vs-kRi"/>
+                        <outlet property="viewLoader" destination="9fj-Ou-F1i" id="GFv-h1-qP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mba-CT-26u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054.347826086957" y="-601.00446428571422"/>
         </scene>
     </scenes>
     <resources>
