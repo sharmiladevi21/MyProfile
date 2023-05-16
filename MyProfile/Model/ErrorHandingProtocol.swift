@@ -1,9 +1,4 @@
-//
-//  ErrorHandingProtocol.swift
-//  HDVisitors
-//
-//  Created by Dreamguys on 29/08/22.
-//
+
 
 import Foundation
 import UIKit

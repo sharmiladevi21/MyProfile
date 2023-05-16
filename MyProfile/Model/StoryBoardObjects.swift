@@ -1,9 +1,3 @@
-//
-//  StoryBoardObjects.swift
-//  eBuddy
-//
-//  Created by Dreamguys on 12/07/21.
-//
 
 import UIKit
 
