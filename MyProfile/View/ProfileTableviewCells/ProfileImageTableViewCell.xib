@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="KGk-i7-Jjw" customClass="ProfileImageTableViewCell" customModule="HotDesk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcT-7I-1is">
+                        <rect key="frame" x="25" y="0.0" width="332" height="138"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLb-Ik-dsb">
+                                <rect key="frame" x="0.0" y="20" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.80392156862745101" green="0.85490196078431369" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="WZQ-59-3Kr"/>
+                                    <constraint firstAttribute="width" constant="75" id="nla-cO-2jw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                        <real key="value" value="37.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyq-WS-vUw">
+                                <rect key="frame" x="95" y="37.5" width="200" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="O4q-YW-kCO"/>
+                                    <constraint firstAttribute="height" constant="20" id="TD3-jC-9uz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Upload photo">
+                                    <color key="titleColor" red="0.058823529411764705" green="0.38431372549019605" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use image at least 250px by 250px" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ9-Ug-4ga">
+                                <rect key="frame" x="95" y="57.5" width="227" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Rq9-Mi-5I8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9q-Ka-Phv">
+                                <rect key="frame" x="20.5" y="39" width="34" height="37"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                <color key="textColor" red="0.058823529411764705" green="0.18431372549019609" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nQ9-Ug-4ga" firstAttribute="top" secondItem="Nyq-WS-vUw" secondAttribute="bottom" id="28C-45-lTi"/>
+                            <constraint firstItem="Q9q-Ka-Phv" firstAttribute="centerY" secondItem="pLb-Ik-dsb" secondAttribute="centerY" id="E4V-Wa-pg9"/>
+                            <constraint firstItem="pLb-Ik-dsb" firstAttribute="leading" secondItem="NcT-7I-1is" secondAttribute="leading" id="EmC-qz-eI1"/>
+                            <constraint firstItem="pLb-Ik-dsb" firstAttribute="top" secondItem="NcT-7I-1is" secondAttribute="top" constant="20" symbolic="YES" id="Kjg-Ne-WWY"/>
+                            <constraint firstItem="nQ9-Ug-4ga" firstAttribute="leading" secondItem="Nyq-WS-vUw" secondAttribute="leading" id="U7K-nG-5Nu"/>
+                            <constraint firstItem="Nyq-WS-vUw" firstAttribute="centerY" secondItem="pLb-Ik-dsb" secondAttribute="centerY" constant="-10" id="VgU-hF-2dK"/>
+                            <constraint firstItem="Q9q-Ka-Phv" firstAttribute="centerX" secondItem="pLb-Ik-dsb" secondAttribute="centerX" id="aP7-R7-IZs"/>
+                            <constraint firstItem="Nyq-WS-vUw" firstAttribute="leading" secondItem="pLb-Ik-dsb" secondAttribute="trailing" constant="20" id="n8J-Ah-7SN"/>
+                            <constraint firstAttribute="trailing" secondItem="nQ9-Ug-4ga" secondAttribute="trailing" constant="10" id="qj2-Nn-Dpg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="NcT-7I-1is" secondAttribute="bottom" id="I9E-Ic-Cfo"/>
+                    <constraint firstItem="NcT-7I-1is" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Sf1-As-hTa"/>
+                    <constraint firstItem="NcT-7I-1is" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UlE-gt-Mrq"/>
+                    <constraint firstAttribute="trailing" secondItem="NcT-7I-1is" secondAttribute="trailing" constant="25" id="qVR-fG-A8v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnUpload" destination="Nyq-WS-vUw" id="qEu-b7-Yhs"/>
+                <outlet property="imgView" destination="pLb-Ik-dsb" id="pGs-Ze-o3y"/>
+                <outlet property="lblImgTips" destination="nQ9-Ug-4ga" id="iTo-Pp-Q9b"/>
+                <outlet property="lblProfileName" destination="Q9q-Ka-Phv" id="7wD-dN-XzQ"/>
+                <outlet property="viewContainer" destination="NcT-7I-1is" id="rdw-1Q-qRX"/>
+            </connections>
+            <point key="canvasLocation" x="115.94202898550725" y="77.008928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

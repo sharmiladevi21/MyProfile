@@ -22,6 +22,12 @@
 		2AC908BD2A135C2600A54275 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC908BC2A135C2600A54275 /* Constants.swift */; };
 		2AC908BF2A135C5800A54275 /* ErrorHandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC908BE2A135C5800A54275 /* ErrorHandingProtocol.swift */; };
 		2AC908C32A1362D900A54275 /* StoryBoardObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC908C22A1362D900A54275 /* StoryBoardObjects.swift */; };
+		2AC908C62A1369E100A54275 /* TableHeaderProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC908C42A1369E100A54275 /* TableHeaderProfile.swift */; };
+		2AC908C72A1369E100A54275 /* TableHeaderProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC908C52A1369E100A54275 /* TableHeaderProfile.xib */; };
+		2AC908CA2A136C9B00A54275 /* CellProfileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC908C82A136C9A00A54275 /* CellProfileName.swift */; };
+		2AC908CB2A136C9B00A54275 /* CellProfileName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC908C92A136C9B00A54275 /* CellProfileName.xib */; };
+		2AC908CE2A1372E700A54275 /* ProfileImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC908CC2A1372E700A54275 /* ProfileImageTableViewCell.swift */; };
+		2AC908CF2A1372E700A54275 /* ProfileImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC908CD2A1372E700A54275 /* ProfileImageTableViewCell.xib */; };
 		2ADC4CF62A129B450040E7FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC4CF52A129B450040E7FF /* AppDelegate.swift */; };
 		2ADC4CFA2A129B450040E7FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC4CF92A129B450040E7FF /* ProfileViewController.swift */; };
 		2ADC4CFD2A129B450040E7FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC4CFB2A129B450040E7FF /* Main.storyboard */; };
@@ -73,6 +79,12 @@
 		2AC908BC2A135C2600A54275 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2AC908BE2A135C5800A54275 /* ErrorHandingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandingProtocol.swift; sourceTree = "<group>"; };
 		2AC908C22A1362D900A54275 /* StoryBoardObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardObjects.swift; sourceTree = "<group>"; };
+		2AC908C42A1369E100A54275 /* TableHeaderProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderProfile.swift; sourceTree = "<group>"; };
+		2AC908C52A1369E100A54275 /* TableHeaderProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableHeaderProfile.xib; sourceTree = "<group>"; };
+		2AC908C82A136C9A00A54275 /* CellProfileName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProfileName.swift; sourceTree = "<group>"; };
+		2AC908C92A136C9B00A54275 /* CellProfileName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProfileName.xib; sourceTree = "<group>"; };
+		2AC908CC2A1372E700A54275 /* ProfileImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageTableViewCell.swift; sourceTree = "<group>"; };
+		2AC908CD2A1372E700A54275 /* ProfileImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageTableViewCell.xib; sourceTree = "<group>"; };
 		2ADC4CF22A129B450040E7FF /* MyProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADC4CF52A129B450040E7FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ADC4CF92A129B450040E7FF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +167,19 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		2AC908D02A1379A800A54275 /* ProfileTableviewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2AC908CC2A1372E700A54275 /* ProfileImageTableViewCell.swift */,
+				2AC908CD2A1372E700A54275 /* ProfileImageTableViewCell.xib */,
+				2AC908C42A1369E100A54275 /* TableHeaderProfile.swift */,
+				2AC908C52A1369E100A54275 /* TableHeaderProfile.xib */,
+				2AC908C82A136C9A00A54275 /* CellProfileName.swift */,
+				2AC908C92A136C9B00A54275 /* CellProfileName.xib */,
+			);
+			path = ProfileTableviewCells;
+			sourceTree = "<group>";
+		};
 		2ADC4CE92A129B450040E7FF = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +205,6 @@
 		2ADC4CF42A129B450040E7FF /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
-				2AC908C22A1362D900A54275 /* StoryBoardObjects.swift */,
 				2ADC4CF52A129B450040E7FF /* AppDelegate.swift */,
 				2ADC4D262A129C6C0040E7FF /* Model */,
 				2ADC4D272A129C7C0040E7FF /* ViewModel */,
@@ -217,6 +241,7 @@
 		2ADC4D252A129C540040E7FF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2AC908D02A1379A800A54275 /* ProfileTableviewCells */,
 				2ADC4D2A2A129D070040E7FF /* StoryBoard */,
 			);
 			path = View;
@@ -225,6 +250,7 @@
 		2ADC4D262A129C6C0040E7FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2AC908C22A1362D900A54275 /* StoryBoardObjects.swift */,
 				2AC908BE2A135C5800A54275 /* ErrorHandingProtocol.swift */,
 				2AC9089F2A1336F500A54275 /* ProfileModel.swift */,
 				2AC908BC2A135C2600A54275 /* Constants.swift */,
@@ -408,6 +434,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADC4D022A129B460040E7FF /* LaunchScreen.storyboard in Resources */,
+				2AC908CF2A1372E700A54275 /* ProfileImageTableViewCell.xib in Resources */,
+				2AC908CB2A136C9B00A54275 /* CellProfileName.xib in Resources */,
+				2AC908C72A1369E100A54275 /* TableHeaderProfile.xib in Resources */,
 				2ADC4CFF2A129B460040E7FF /* Assets.xcassets in Resources */,
 				2ADC4CFD2A129B450040E7FF /* Main.storyboard in Resources */,
 			);
@@ -538,6 +567,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AC908BB2A135AD300A54275 /* NVActivityIndicatorShape.swift in Sources */,
+				2AC908C62A1369E100A54275 /* TableHeaderProfile.swift in Sources */,
+				2AC908CA2A136C9B00A54275 /* CellProfileName.swift in Sources */,
 				2AC908BD2A135C2600A54275 /* Constants.swift in Sources */,
 				2AC908AB2A1358B200A54275 /* Helper.swift in Sources */,
 				2AC908B82A135AD300A54275 /* ProgressHud.swift in Sources */,
@@ -547,6 +578,7 @@
 				2ADC4CFA2A129B450040E7FF /* ProfileViewController.swift in Sources */,
 				2AC908A02A1336F500A54275 /* ProfileModel.swift in Sources */,
 				2ADC4D2E2A129D2F0040E7FF /* Color+Extension.swift in Sources */,
+				2AC908CE2A1372E700A54275 /* ProfileImageTableViewCell.swift in Sources */,
 				2ADC4D312A129E110040E7FF /* Reachability.swift in Sources */,
 				2ADC4CF62A129B450040E7FF /* AppDelegate.swift in Sources */,
 				2ADC4D2D2A129D2F0040E7FF /* Font+Extension.swift in Sources */,

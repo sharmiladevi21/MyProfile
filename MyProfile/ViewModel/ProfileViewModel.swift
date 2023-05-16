@@ -3,18 +3,21 @@
 import Foundation
 import Combine
 
-protocol sendBackData : AnyObject{
-    func updateProfileInfo(result : Profile)
-}
 
 class ProfileViewModel {
     
-    var profileData = [Result]()
+    private var profileData = [Result]()
     var delegate : SuccessAndErrorHandling?
+    
+    //MARK: - Getter Method
+    
+    func getProfileData() -> Result?{
+        return profileData.first
+    }
 
     //MARK: - API METHODS
 
-    func getProfileList() {
+    func callProfileListAPI() {
 
         if !HELPER.isConnectedToNetwork() {
             
@@ -43,13 +46,12 @@ class ProfileViewModel {
                     }
                     self?.profileData = item.results
                     
-                    self?.delegate?.successWithData(for: ResponseType.kRESPONSE_SUCCESS_RELOAD, index: 0)
+                    self?.delegate?.successWithData(for: ResponseType.kRESPONSE_SUCCESS, index: 0)
                     
                 } catch {
                     print(error.localizedDescription)
                 }
-            }
-                else {
+            }else {
                     self?.delegate?.errorWithData(errorCode: "204", errorMsg: "No data found")
 
                 }

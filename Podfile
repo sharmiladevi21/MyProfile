@@ -9,6 +9,8 @@ target 'MyProfile' do
   # Pods for MyProfile
 
   pod 'Alamofire'
+  pod 'SDWebImage', '~>3.7'
+  pod 'IQKeyboardManagerSwift'
 
   target 'MyProfileTests' do
     inherit! :search_paths
