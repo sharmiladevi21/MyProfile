@@ -110,7 +110,7 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource{
         switch arrHeaderTitles[indexPath.section] {
             
         case profileDetail.photo:
-            return 120
+            return 100
             
         case profileDetail.name, profileDetail.email,profileDetail.mobile,profileDetail.location:
             return 40
@@ -155,34 +155,37 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource{
             
         case profileDetail.location:
             switch indexPath.row {
-              case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
-                if let data = profileviewmodel.getProfileData() {
-                    cell.configureCell(displaytext: data.location.country, isEditable: true)
-
-                }
-                return cell
-              case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
-                if let data = profileviewmodel.getProfileData() {
-                    cell.configureCell(displaytext: data.location.state, isEditable: true)
-
-                }
-                return cell
-            case 2:
-              let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
-              if let data = profileviewmodel.getProfileData() {
-                  cell.configureCell(displaytext: data.location.city, isEditable: true)
-
-              }
-              return cell
-            case 3:
+             
+            case 0:
               let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
               if let data = profileviewmodel.getProfileData() {
                   cell.configureCell(displaytext: String(data.location.street.number) + "," + data.location.street.name, isEditable: true)
 
               }
               return cell
+            case 1:
+              let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
+              if let data = profileviewmodel.getProfileData() {
+                  cell.configureCell(displaytext: data.location.country, isEditable: true)
+
+              }
+              return cell
+              
+            case 2:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
+                if let data = profileviewmodel.getProfileData() {
+                    cell.configureCell(displaytext: data.location.state, isEditable: true)
+
+                }
+                return cell
+            case 3:
+              let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
+              if let data = profileviewmodel.getProfileData() {
+                  cell.configureCell(displaytext: data.location.city, isEditable: true)
+
+              }
+              return cell
+       
             case 4:
               let cell = tableView.dequeueReusableCell(withIdentifier: "CellProfileName") as! CellProfileName
               if let data = profileviewmodel.getProfileData() {
